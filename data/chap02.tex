@@ -1292,148 +1292,913 @@ HYD TRANSFER PUMP 开关有两个档位，分别是 SHUTOFF（关闭）和 NORMA
 
 \subsection{左侧控制台}
 
+\subsubsection{飞行服抗荷充气监测按钮}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{g-valve1.png}
+\end{figure}
+按下按钮来测试抗荷服充气。
+
+\subsubsection{供氧气-通风控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{oxygen-vent1.png}
+\end{figure}
+用于控制抗荷服或坐垫的通风气流以及通向 RIO 面罩的氧气。
+
+\begin{enumerate}
+  \item VENT AIRFLOW 拨轮：通风气流调节拨盘，用于控制抗荷服气流进出，未连接抗荷服时则控制坐垫气流。
+  \item OXYGEN开关：供氧开关，开关有 ON / OFF 两个档位。用于控制流向面罩的氧气。
+\end{enumerate}
+
+\subsubsection{数据储存室}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{datastowage.png}
+\end{figure}
+数据储存室用于存放设备和任务简报等材料。
+
+\subsubsection{TACAN控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{tacan1.png}
+\end{figure}
+如果 RIO 拥有 TACAN 设备控制权，则可以通过该控制面板操作 TACAN。
+
+\begin{enumerate}
+  \item 双层旋转开关：使用外侧拨盘选择 TACAN 波道的前两位数字，使用内侧拨盘选择最后一位数字。
+  \item GO 和 NO-GO 灯：通过/未通过指示灯，指示 TACAN 是否通过自检。
+  \item BIT 按钮：自检按钮，按下按钮开始 TACAN 自检。
+  \item MODE 开关：波段模式选择开关，用于切换 TACAN 工作波段，可以选择 X 或 Y 波段。INVERSE 模式无功能。
+  \item VOL 旋钮：音量旋钮，用于调节飞行员 TACAN 音频音量。
+  \item 模式选择旋钮：用户选择TACAN工作模式。
+  \begin{itemize}
+    \item OFF：关闭 TACAN。
+    \item REC：仅接收信号。
+    \item T/R：传输并接收信号，该模式下TACAN可以进行测距。
+    \item A/A：空对空TACAN模式。
+    \item BCN：信标TACAN模式（无功能）。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{通信/TACAN指令面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{comtac.png}
+\end{figure}
+用于选择 ICS（通讯系统）电台设置和拥有 TACAN 控制权的机组成员。
+
+\begin{enumerate}
+  \item XMTR SEL 开关：选择 RIO PTT（按键通话）按下后在哪个 VHF/UHF 电台通信。
+  \begin{itemize}
+    \item UHF 1：选择 ARC-159 UHF 无线电台。
+    \item BOTH：同时选择 ARC-159 UHF 和 ARC-182 VHF/UHF 电台。
+    \item V/UHF 2：选择 ARC-182 VHF/UHF 无线电台。
+  \end{itemize}
+  \item V/UHF 2 天线控制开关：选择 V/UHF 2 使用的天线。
+  \begin{itemize}
+    \item UPR：选择上部天线。
+    \item LWR：选择下部天线。
+  \end{itemize}
+  \item TACAN CMD 按钮开关：带有指示灯的按钮开关，用于指定控制 TACAN 设备的乘员（飞行员 / RIO）。指示灯显示当前的设定。
+  \item UHF 1 音量控制旋钮：用于控制 RIO 头戴中 UHF 1 音频音量。
+  \item KY MODE 开关：KY 模式选择开关，只在安装了 KY-58 时有效。
+\end{enumerate}
+注意：由于 DCS F-14B 安装的是 KY-28，因此 KY MODE 开关在 DCS 中无功能。
+
+\subsubsection{V/UHF 2（AN/ARC-182）无线电台}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{arc-182.png}
+\end{figure}
+V/UHF 2 及相关控制。
+
+\begin{enumerate}
+  \item VOL旋钮：控制 RIO 头戴中 V/UHF 2 音频音量。
+  \item SQL 开关：静噪控制开关，有 ON / OFF 两个档位，分别用于开启或关闭静噪。
+  \item 频率选择开关：频率选择拨动开关，用于调定频率。
+  \item FREQ./(CHAN) 显示窗：频率 /（波道）显示窗，用于显示当前选中的频率或波道。
+  \item UHF 开关：UHF 调制选择开关，用于选择使用的调制模式，工作频率波段为 225.000 至 399.00 MHz。
+  \item BRT 旋钮：亮度旋钮，用于调节显示屏的亮度。
+  \item MODE 旋钮：模式选择旋钮，用于选择 V/UHF 2 电台的工作模式。
+  \item 频率模式选择旋钮：双层旋钮开关的外侧旋钮，用于选择频率模式。
+  \item CHAN SEL 旋钮：双层旋钮开关的内侧旋钮，用于选择预设波道。  
+\end{enumerate}
+注意：“Have Quick”抗干扰功能在 DCS 中未实装。
+
+\subsubsection{KY-28控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ky-28.png}
+\end{figure}
+
+\begin{enumerate}
+  \item ZEROIZE 开关：擦除开关，带有保护盖，用于擦除（zeroize） KY-28 编码。
+  \item 电源模式开关：用于选择 KY-28 工作模式。
+  \item 无线电台选择开关：用于选择与 KY-28 一起使用的无线电台。
+\end{enumerate}
+
+\subsubsection{雷达信标控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{beacon.png}
+\end{figure}
+用于控制 AN/APN-154 雷达信标。
+
+\begin{enumerate}
+  \item MODE 选择开关：模式选择开关，用于控制雷达信标工作模式。
+  \begin{itemize}
+    \item SINGLE：雷达信标回应单脉冲编码。
+    \item DOUBLE：雷达信标回应设定的双脉冲编码。
+    \item ACLS：启用 ACLS 信标增强装置，用于着舰时为 CATCC 雷达锁定提供信号源。
+  \end{itemize}
+  \item ACLS TEST 按钮：ACLS 测试按钮，这个绿色按钮灯用于指示信标工作状态或用于测试信标。选择 ACLS 模式时，按下按钮灯，如果指示灯亮起则表示通过测试。探测到 AN/SPN-42（舰载）雷达信号时，绿灯会闪烁，而当 AN/SPN-42 锁定本机来提供 ACLS 引导时，绿灯会稳定亮起。
+  \item PWR 开关：电源开关，用于控制信标电源。
+  \begin{itemize}
+    \item PWR：启用信标，根据所选模式进行回应。
+    \item STBY：用于预热系统，如果模式选择开关置于 ACLS 档位，同时也会启用信标 ACLS 回应。
+    \item OFF：信标关闭。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{液冷控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{liquidcooling.png}
+\end{figure}
+LIQ COOLING 开关用于控制 AWG-9 和 AIM-54 的冷却系统。AWG-9 冷却控制电路可以独立于 AIM-54 电路启用。使用 AWG-9 前，或进行 AIM-54 导弹发射准备前，需开启此开关。
+
+\subsubsection{机内通话系统控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ics1.png}
+\end{figure}
+用于控制机内通话系统（ICS）。
+
+\begin{enumerate}
+  \item VOL 旋钮：这个旋钮用于控制 RIO 接收飞行员对讲音频的音量。
+  \item 放大器选择旋钮：这个旋钮用于选择使用哪种放大器处理 RIO 头戴的音频。
+  \begin{itemize}
+    \item B/U：备用放大器。
+    \item NORM：正常放大器。
+    \item EMER：应急放大器。这个档位会使用飞行员的放大器和他的音量设定。启用时将无法监听只有常规放大器中 RIO 才能听见的音频警告/提示。
+  \end{itemize}
+  \item ICS 控制开关：用于选择 ICS 的功能。
+  \begin{itemize}
+    \item RADIO OVERRIDE：无线电台超控，让 ICS 音频替换无线电音频。
+    \item HOT MIC：飞行员无需按下 PTT（Push-To-Talk，按键说话）即可通话。地勤人员也可以通过外部对讲机与乘员通话。
+    \item COLD MIC：飞行员需按下 PTT 才能通话。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{弹射指令控制杆}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ejectcommand.png}
+\end{figure}
+由飞行员发起的弹射总是会同时弹射所有机组成员。弹射指令控制杆用于设置弹射系统在 RIO 弹射时的行为：如果选择 PILOT 模式（手柄向前），RIO 弹射时，只有 RIO 自己会弹射。如果选择 MCO 模式，RIO 弹射时，RIO 和飞行员都会弹射。
+
+\subsubsection{传感器控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{radarircontrol.png}
+\end{figure}
+用于控制 AWG-9 雷达的扫描设置、TCS（电视摄像套件）和机载录像机。
+
+\begin{enumerate}
+  \item STAB 开关：用于控制雷达相对地面稳定。
+  \item AZ CTR 旋钮：扫描方位控制旋钮，用于选择横向扫描区域的中心。
+  \item EL CTR 旋钮：扫描仰角控制旋钮，用于选择垂直扫描区域的中心。
+  \item VSL 控制开关：这个弹簧开关用于选择 VSL（垂直扫描锁定）模式的 HI（高目标）或 LO（低目标），释放开关后，开关弹回中间位置。
+  \item AZ SCAN 旋钮：用于控制方位角扫描范围。
+  \item EL BARS 旋钮：用于控制仰角中扫描线的数量。
+  \item TCS TRIM 旋钮：TCS 调整旋钮，用于校正 TCS 视频的方位和仰角。
+  \item SLAVE 开关：传感器隶属控制开关，用于选择隶属于另一个传感器的传感器。
+  \item ACQ 开关：目标捕获模式选择开关，用于从 AUTO、MAN 或 ATUO SRCH 中选择 TCS 的目标捕获模式。
+  \item FOV 开关：视场控制开关，用于选择 TCS 的视场，可选择 WIDE（宽）或 NAR（窄）。
+  \item MODE 旋钮：用于选择 AVTR（机载录像机）录制哪些显示器中的视频。
+  \item MIN REMAIN 显示窗：录像剩余时间显示窗，计数器显示了 AVTR 录像的剩余录制时间。
+  \item RECORD 开关：录像控制开关，用于控制 AVTR，可选择 OFF（关闭）、STBY（待机）或 ON（开启）档位。
+  \item 录像指示灯：用于指示 AVTR 的工作状态，这些工作状态包括 STBY（待机）、EOT（录像带结束）和 REC（录制）。
+\end{enumerate}
+
+\subsubsection{计算机位址面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{cap.png}
+\end{figure}
+CAP（计算机位址面板）用于向 WCS（武器控制系统）输入数据。MESSAGE（信息）滚筒指示器和对应的按钮开关与新式飞机装备的 MFD（多功能显示器）类似。
+
+\begin{enumerate}
+  \item CLEAR 按钮：清除按钮，用于清除当前 TID 缓冲寄存器中的数据，不向 WCS 输入数据。
+  \item ENTER 按钮：输入按钮，向 WCS 输入当前 TID 缓冲寄存器中的数据。
+  \item 前缀和数字按钮：带有前缀选择功能的数字按钮。
+  \item MESSAGE 按钮开关：用于选择 MESSAGE 滚筒指示器上的功能。
+  \item MESSAGE 滚筒指示器：指示器下方的滚筒用于指示当前可用的 MESSAGE 功能。
+  \item PRGM RESTRT 按钮：程序重启按钮，用于重启 WCS 中运行的程序。
+  \item CATEGORY 选择开关：用于选择 MESSAGE 滚筒指示器中的当前功能类别。
+  \item TUNE DSBL：Training (Number)，无功能。
+\end{enumerate}
+注意：所有按钮都带有指示灯，这些灯光指示了当前选择的功能下可用的操作。
+
 \subsection{左侧垂直控制台}
+
+\subsubsection{武器控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{armamentpanel.png}
+\end{figure}
+RIO 驾驶舱中的主要武器控制面板。
+
+\begin{enumerate}
+  \item WPN TYPE 拨轮：武器类型选择拨轮，用于选择 WCS（武器控制系统）在 A/G（空对地）模式中进行挂载投放数据计算时使用的武器类型。
+  \item ATTK MODE 旋钮：攻击模式选择旋钮，用于选择使用哪种 A/G 模式。
+  \item ELEC FUSE 开关：电子引信选择开关，用于设定空对地挂载的电子引信模式。
+  \item A/G GUN 开关：空对地航炮开关，用于控制 A/G 模式下飞机航炮的工作模式。MIXED（混合模式）允许在投放空对地挂载的同时射击航炮。
+  \item QTY 选择开关：投放数量选择开关，用于选择所需投放的空对地挂载（包括火箭弹）数量。
+  \item INTERVAL 选择开关：发射间隔选择器，用于控制连续投放模式下的武器投放间隔，设置的投放间隔的单位是毫秒。
+  \item 挂点 6 选择开关：选择挂点 6 挂载的武器，用于挂载抛离或空对地模式武器投放。
+  \item A/A LAUNCH 按钮：空对空发射按钮，这是 RIO 用于发射 AIM-7 或 AIM-54 的按钮，按钮亮起表示发射电路就绪。
+  \item MSL SPD GATE 旋钮：导弹速度门限选择旋钮，用于设置导弹速度门限的位置。
+  \item 挂点 8 选择开关：选择挂点 8 挂载的武器，用于挂载抛离或空对地模式武器投放。开关的 B 档位选择翼套下挂点，而 SW 档位无功能。
+  \item MSL OPTIONS 开关：导弹发射选项设置开关，用于启用 AIM-7 脉冲多普勒模式或 AIM-54 主动发射模式。
+  \item 挂点 5 选择开关：选择挂点 5 挂载的武器，用于挂载抛离或空对地模式武器投放。
+  \item NEXT LAUNCH 按钮：下一发射目标选择按钮，RIO 可以使用这个按钮将当前勾选的 TWS 目标作为下一个发射目标。
+  \item 挂点 4 选择开关：选择挂点 4 挂载的武器，用于挂载抛离或空对地模式武器投放。
+  \item 挂点 1 选择开关：选择挂点 1 挂载的武器，用于挂载抛离或空对地模式武器投放。开关的 B 档位选择翼套下挂点，而 SW 档位无功能。
+  \item 油箱抛离挂点 7 选择开关：选择挂点 7 挂载的油箱来进行抛离。
+  \item 油箱抛离挂点 2 选择开关：选择挂点 2 挂载的油箱来进行抛离。
+  \item 挂点 3 选择开关：选择挂点 5 挂载的武器，用于挂载抛离或空对地模式武器投放。
+  \item JETT OPTIONS 开关：挂载抛离选择开关，用于选择挂载抛离时，只抛离 WPNS（武器）还是连同 MER/TER（武器挂点）一起抛离。DCS F-14B 中未模拟此开关功能。
+  \item SEL JETT 开关：选择抛离开关，用于设定选中挂点的抛离模式，JETT（正常）模式或 AUX（备用）模式。升起开关保护盖才可将开关拨至 AUX 模式。
+  \item MECH FUSE 开关：机械引信选择开关，用于启用机械引信和设定空对地挂载使用的机械引信类型。
+  \item DLVY MODE 开关：投放模式选择开关，这两个开关用于选择空对地投放模式。一个开关用于控制逐个或连续投放挂载，而另一个开关用于控制每次按下扳机时，投放单个挂载还是成对投放挂载。
+\end{enumerate}
 
 \subsection{左仪表板}
 
+\subsubsection{气动伺服高度表}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{altimeter1.png}
+\end{figure}
+气动伺服高度表的控制和指示器。
+
+\begin{enumerate}
+  \item 高度表读数：在机械计数器的三个数位上分别显示万英尺、千英尺和百英尺读数。同时，表盘指针指向的圆形刻度表示百英尺。
+  \item 气压调节旋钮：设置以英寸汞柱（in.Hg）为单位的本地气压。只用于气压计本身的读数，所有其他（由 CADC 控制的）数字指示器都使用 29.92 英寸汞柱作为气压数值。
+  \item 当地气压：指示调定的本地气压值，这个显示框也被称为“Kollsman Window”。
+  \item 模式选择开关：三档位弹簧开关，松开开关时，开关从 RESET 位置弹回正常位置。如果接通电源，且 CADC 可提供高度数据，那么将开关在 RESET 档位保持3秒后，高度计会进入正常（伺服）工作模式。如果将开关拨至 STBY 位置，或电源断开，或缺少 CADC 高度数据，那么3秒后，系统会切换至备用（气压）模式。
+\end{enumerate}
+
+STBY 标识旗：如果系统处于备用工作模式，表盘中会显示红色的标有 STBY 字样的标识旗。
+注意：10,000 英尺下高速飞行时，由于气压变化较大，飞机跨声速飞行时，气压计读数误差最多 1,200 英尺，而超声速飞行时，误差可能高达 4,000 英尺 。
+
+\subsubsection{空速马赫表}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{mach1.png}
+\end{figure}
+用于指示空速和马赫数。
+
+\begin{enumerate}
+  \item 空速表拨盘：用三种刻度显示指示空速，其中两种刻度对应指示空速，另一种刻度则是随着指针拨盘镂空处转动而显示的马赫数。
+  \item 指示空速刻度（外圈）：用于显示指示空速，最高200节。
+  \item 指示空速刻度（内圈）：用于显示指示空速，刻度对应从200节到850节空速。内圈的指示空速刻度被空速表拨盘未镂空的部分盖住，直到需要显示对应的空速时。
+  \item 马赫数刻度：马赫数的读数。显示正确的以马赫数为单位的指示空速。
+  \item 指示空速游标：可以将游标调定到所需的指示空速上。
+  \item 马赫数游标：可以将游标调定到所需的马赫数上。在上图中不可见。
+  \item 最大安全马赫数游标：显示 CADC 计算的最大安全马赫数。
+  \item 游标设置旋钮：这个旋钮有抽出和按下两个档位，分别用于设置指示空速游标和马赫数游标。
+\end{enumerate}
+
+\subsubsection{备用姿态仪}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{standbyattitude1.png}
+\end{figure}
+独立工作的备用姿态仪。
+
+表盘左侧显示的 OFF 标识旗表示备用姿态仪锁定或未通电。
+
+表盘右下方的旋钮用于锁定/解锁姿态仪和调节俯仰梯度显示。旋钮抽出时，姿态仪锁定。旋钮按下时，旋转旋钮可以调节俯仰梯度指示线。
+
+\subsubsection{UHF远程显示器}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{backremote.png}
+\end{figure}
+这个远程显示器用于显示 UHF 1（AN/ARC-159）中调定的频率或波道。
+
+\begin{itemize}
+  \item UHF 1 远程波道/频率指示器：显示 UHF 1 无线电台调定的频率或波道。
+  \begin{itemize}
+    \item TEST：开始显示器自检，如果通过测试，屏幕中会显示 888.888。
+    \item DIM：用于控制显示器亮度。
+  \end{itemize}
+\end{itemize}
+
 \subsection{中央仪表板}
+
+\subsubsection{箔条/红外干扰弹弹射开关}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{cmhats.png}
+\end{figure}
+RIO 握把上的两个苦力帽开关用于发射对抗措施。两个开关的功能相同。
+
+\begin{itemize}
+  \item 向上移动：弹射单发箔条。
+  \item 向下移动：启动设定的箔条弹射程序。
+  \item 向内移动：启动设定的有源干扰弹弹射程序。
+  \item 向外移动：启动设定的红外干扰弹弹射程序。
+\end{itemize}
+
+\subsubsection{详细数据显示器}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{DDD.png}
+\end{figure}
+雷达主控面板。
+
+\begin{enumerate}
+  \item TGTS 开关：目标尺寸选择开关，用于切换目标尺寸，目标尺寸用于计算导弹发射区间和设定 WCS 目标跟踪参数。
+  \item MLC 开关：主瓣杂波抑制开关，用于选择雷达的 MLC（主瓣杂波）抑制工作模式。
+  \item AGC 开关：自动增益控制开关，用于控制雷达自动增益控制的时间常数。目前在 DCS 中无功能。
+  \item PARAMP 开关：参数放大器控制开关，用于控制参数放大器。目前在 DCS 中无功能。
+  \item PULSE VIDEO 旋钮：脉冲多普勒图像控制旋钮，用于控制 DDD 脉冲多普勒图像的强度。
+  \item 雷达跟踪状态指示灯：用于指示 STT（单目标跟踪）模式下雷达跟踪状态。
+  \begin{itemize}
+    \item ANT TRK：指示雷达正在跟踪目标（相对本机）的角度。
+    \item RDROT：指示目标正处于距离和接近率门限内，且雷达正在跟踪该目标。
+    \item JAT：指示雷达正跟踪干扰源（相对本机）的角度。
+    \item IROT：指示 TCS 角度跟踪，之所以称为 IROT 是因为早期的 A 型上装备了 IRST。
+  \end{itemize}
+  \item RANGE 显示窗：距离显示窗，用于显示当前选定的雷达搜索距离的滚筒指示器。如果 DDD 中未选用任何距离标尺，则无显示。
+  \item RANGE 按钮：距离选择按钮，用于选择雷达显示距离。
+  \item BRIGHT 旋钮：亮度旋钮，用于控制 DDD 前方的偏振滤光片以调节显示器亮度。
+  \item IR AUDIO THRLD 旋钮：IR 音频阈值旋钮，用于控制红外音频阈值，使用 TCS 时无功能。
+  \item IR AUDIO VOL 旋钮：用于控制红外音频音量，使用 TCS 时功能。
+  \item IR GAIN 旋钮：红外增益旋钮，用于控制红外增益，使用 TCS 时无功能。
+  \item XMTR CHAN 拨轮：传输频率选择拨轮，共有12个档位，用于控制 AWG-9 的工作频率。目前在 DCS 中无功能。
+  \item MSL CHAN 拨轮：导弹波道选择拨轮，共有6个档位，用于控制 AIM-7 或 AIM-54 使用的波道。目前在 DCS 中无功能。
+  \item DISPLAY 按钮：显示内容选择按钮，用于控制 DDD 屏幕中显示的内容。使用 TCS 时，IR 按钮无功能。
+  \item WCS MODE 按钮：武器控制系统模式按钮，用于选择当前的 AWG-9 工作模式。
+  \item WCS MODE 显示窗：武器控制系统工作模式显示窗，下方滚筒内的标识指示了当前 WCS 模式。
+  \item Vc 选择开关：接近率标尺选择开关，用于选择 PD（脉冲多普勒）模式下 DDD 显示的接近率标尺。
+  \item ERASE 旋钮：用于控制 DDD 显示中擦除射束（erase beam）的强度，以控制 DDD 上的图像消失快慢。
+  \item PULSE GAIN 旋钮：脉冲增益旋钮，用于控制 AWG-9 脉冲模式下的增益，通常将旋钮置于锁定机构中，除非出现杂波或干扰。
+  \item ASPECT 选择开关：目标方位选择开关，用于控制脉冲多普勒模式下的多普勒过滤速率区间，也用于选择在脉冲模式下跟踪目标回波边缘或回波质心。这些设置对应了预计目标姿态。
+  \item EL 指示器：指示器中的指针位置对应了传感器的仰角。左侧指针指向当前实际雷达天线仰角。在 HCU 上选择 RDR（雷达）时，右侧指针指向指令雷达天线仰角，而当 HCU 上选择 IR/TV 时，右侧指针指向 TCS 镜头仰角。
+  \item CCM MODES 按钮：反对抗模式选择按钮，用于选择 AWG-9 反目标干扰功能。目前在 DCS 中无功能。
+  \item JAM/JET 旋钮：干扰源强度阈值控制旋钮，用于设置将雷达回波判断为干扰目标的阈值。 目前在 DCS 中无功能。
+  \item ACM THRLD 旋钮：雷达空战格斗模式灵敏度调节旋钮，用于控制近距离下雷达的灵敏度。旋钮通常置于最左侧的档位，由 WCS 自动调节灵敏度。
+  \item PD THRLD 旋钮：脉冲多普勒图像阈值控制旋钮，用于调节 DDD 的 CLEAR 区域（回波净区，DDD 显示器上半部分）和 CLUTTER 区域（杂波区，DDD 显示器下半部分）中的脉冲多普勒图像阈值。
+  \item DDD 雷达显示器：AWG-9 雷达主显示器。
+\end{enumerate}
 
 \subsection{中央控制台}
 
+\subsubsection{战术信息显示器（TID）}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{tid.png}
+\end{figure}
+战术信息显示器及导航系统相关控制器。
+
+\begin{enumerate}
+  \item INS 状态指示器：指示器灯光指示 INS（惯性导航系统）对准状态。STBY 指示 INS 电源已接通但未完成对准。READY 指示 INS 对准精度已符合 AIM-54 最低发射标准。选择 INS 模式时，STBY 和 READY 灯应熄灭。如果灯未熄灭，则表示 INS 系统故障。
+  \item CONTRAST 旋钮：对比度控制旋钮，用于调节 TCS 视频的对比度。
+  \item DATA READOUT 指示器：显示数据滚筒指示器，用于在 TID 文本读数中指示数据的来源。如果显示器内的滚筒上没有数据源对应的名称，则显示器无显示。
+  \item BRIGHT 旋钮：亮度控制旋钮，用于调节 TID 屏幕亮度。
+  \item STEERING 指示器：转向信息显示器，显示当前导航系统向飞行员显示的转向信息。
+  \item DEST 选择开关：用于选择导航目标（DEST）模式的导航目标航路点。
+  \item CLSN 按钮：带有指示灯的按钮，用于选择恒量角度拦截转向跟踪目标或 TWS 质心。
+  \item DISPLAY 按钮：用于控制 TID 屏幕中显示何种类型的标识。选择对应的按钮时，按钮指示灯亮起起。
+  \begin{itemize}
+    \item RID DISABLE：未实装。
+    \item ALT NUM：显示或隐藏目标跟踪标识左侧的高度数值。
+    \item SYM ELEM：显示或隐藏跟踪目标的所有补充标识。未选中时，TID 将只显示一个表示跟踪目标的圆点。
+    \item DATA LINK：显示或隐藏所有数据链路跟踪目标。
+    \item JAM STROBE：显示或隐藏干扰信号源。
+    \item NON-ATTK：显示或隐藏不可攻击的跟踪目标。
+    \item VEL VECTOR：显示或隐藏跟踪目标的速度矢量。
+    \item LAUNCH ZONE：显示或隐藏目标的导弹发射区间。如果显示了目标速度矢量，则替换速度矢量标识。在到达目标的导弹发射最大距离 60 秒前，WCS 会自动激活导弹发射区间显示。
+  \end{itemize}
+  \item RANGE 选择开关：TID 显示距离标尺选择开关，用于选择 TID 屏幕直径当前对应的显示距离。
+  \item TID MODE 选择开关：TID 模式选择开关，用于控制 TID 显示模式。
+  \item TRACK HOLD 按钮：跟踪信号保持按钮，用于延长从上一次收到目标回波到目标从屏幕中擦除的所需时间，最多延长至2分钟，正常时间是14秒。
+  \item NAV MODE 选择开关：导航模式选择开关，用于选择导航参考系统，也用于 INS 对准。
+\end{enumerate}
+
+\subsubsection{HCU控制器}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{hcu.png}
+\end{figure}
+雷达和 TCS 控制杆。
+
+\begin{enumerate}
+  \item IR/TV 开关：用于控制 TCS 电源。
+  \item IR/TV 超温指示灯：灯光亮起表示 TCS 超温。
+  \item LIGHT TEST 按钮：灯光测试按钮，用于测试所有 AWG-9 灯光。
+  \item PWR RESET 指示灯：电源复位指示灯，灯光亮起表示一个或多个不工作的二次电源。
+  \item PWR RESET 按钮：电源复位按钮，用于复位不工作的二级电源。但如果导致电源不工作的状况仍未解决，受影响的二级电源依旧无法正常工作。
+  \item WCS 指示灯：灯光亮起表示 WCS 控制开关选择了 STBY 或 XMT 档位，但雷达未准备就绪，或 选择了 XMT 档位，但雷达未正常工作。
+  \item WCS 控制开关：用于控制 WCS 电源（计算机和雷达）。将开关拨至 STBY 档位会使 WCS 通电，在静默状态下进行预热。如果雷达已经准备就绪，选择 XMT 档位会启用雷达。AWG-9 显示器预热需要30秒，而雷达预热需要3分钟。
+  \item MRL 按钮：用于选择手动快速锁定模式。超控所有除 PLM（飞行员锁定模式）和 VSL（垂直扫描锁定）外的雷达工作模式。
+  \item OFFSET 按钮：用于偏置 TID 屏幕中勾选的位置。
+  \item ELEV 拨轮：用于微调 STT 锁定模式下的雷达天线仰角。
+  \item HCU 扳机：根据 WCS 模式和 HCU 当前的功能来选择和激活不同的功能。扳机第一段是 HALF ACTION（按下一半），第二段是 FULL ACTION（完全按下）。例如，锁定目标和勾选 TID 标识时，都需要使用这个双段式扳机。
+  \item HCU 功能按钮：带有指示灯的按钮，用于选择 HCU 控制杆的功能。开关之间互斥（只能选中一个开关）。
+  \begin{itemize}
+    \item IR/TV：选择 TCS 方位角、仰角和跟踪控制。选择后，DDD 屏幕右侧的俯仰角指示条会显示 TCS 的仰角。
+    \item RDR：选择 STT 锁定模式雷达天线控制，如果雷达已经处于 STT 模式中，则返回搜索状态。选择后，DDD 屏幕右侧的俯仰角指示条会显示雷达天线当前的指令仰角。
+    \item DDD CURSOR：选择 DDD 光标控制，用于在脉冲雷达模式下标记地理位置。
+    \item TID CURSOR：选择 TID 光标控制，用于勾选 TID 屏幕中的标识。
+  \end{itemize}
+\end{enumerate}
 
 \subsection{左右脚部空间}
 
+\subsubsection{ICS 脚踏开关}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{left.png}
+\end{figure}
+RIO 左脚踏板是一个用于 COLD MIC 模式下进行机内通话 PTT（按键通话）的脚踏开关。
+
+\subsubsection{传声器脚踏开关}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{right.png}
+\end{figure}
+RIO 右脚踏板是一个用于无线电 PTT 的脚踏开关，踩下脚踏开关会根据 ICS 设置使用 UHF 1 或 V/UHF2，或同时使用两个电台进行通讯。
+
 \subsection{右仪表板}
+
+\subsubsection{时钟}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{clock1.png}
+\end{figure}
+机械发条时钟。
+
+左下角的旋钮用于上紧时钟发条，顺时针旋转旋钮，然后抽出旋钮来设置时针和分针。
+
+右上角的按钮用于开始、停止和复位时长为1小时的计时器。
+
+\subsubsection{ALR-67显示器}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{alr-671.png}
+\end{figure}
+用于显示 ALR-67 RWR（雷达告警接收机）组件侦测到的辐射源。
+
+\begin{enumerate}
+  \item 系统状态圈
+  \begin{itemize}
+    \item 左上象限：显示的符号代表威胁目标的显示类型。
+    \begin{itemize}
+      \item N：正常优先级。
+      \item I：AI，优先显示机载拦截雷达威胁。
+      \item A：AAA，优先显示防空高炮威胁。
+      \item U：优先显示未知辐射源。
+      \item F：显示其他雷达威胁的同时也显示友方信号源。
+    \end{itemize}
+    \item 右上象限：显示 ARL-67 是否处于限制模式。
+    \begin{itemize}
+      \item 无显示：未选择限制模式。
+      \item L：选用限制模式，只显示威胁最高的6个雷达威胁。
+    \end{itemize}
+    \item 下班部分：显示故障编码，或指示是否启用了威胁目标符号偏置。
+    \begin{itemize}
+      \item 无显示：无故障且未选择符号偏置。
+      \item B：BIT（自检）未通过。
+      \item T：过热。
+      \item O：选择了偏置显示模式。重叠的威胁目标符号会偏置显示，以增强可读性。选择偏置显示模式时，显示器指示目标方位信息的精度会下降。
+    \end{itemize}
+  \end{itemize}
+  \item 非致命威胁区：用于显示 RWR 认为处于射程外，或未装备武器，从而不直接对本机构成威胁的辐射源。
+  \item 致命威胁区：用于显示 RWR 认为处于射程内，且装备武器，但并未攻击本机的辐射源。
+  \item 严重威胁区：显示对本机构成直接威胁的辐射源。辐射源有能力攻击本机，且攻击意图明显。
+  \item 亮度控制旋钮：用于控制显示器的亮度。
+\end{enumerate}
+
+\subsubsection{燃油总量表}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{fuel1.png}
+\end{figure}
+燃油总量读数对应了飞机所有油箱中的燃油总量。
+
+\subsubsection{威胁提示灯和主注意灯}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{threatmaster.png}
+\end{figure}
+主注意（Master Caution）灯以及各种 ECM 和 IFF 相关提示 / 报警灯。
+
+\begin{enumerate}
+  \item MASTER CAUTION 按钮灯：主注意灯闪烁表示 RIO 注意/提示灯面板上灯光状态发生变化。按下来复位主注意灯，熄灭灯光直到下一个注意事件被触发。
+  \item IFF：敌我识别提示灯，灯光亮起表示接收到 MODE 4 询问，但 IFF 系统未应答。
+  \item RCV：信号接收提示灯，灯光亮起表示 ALQ-126 接收到一个威胁识别信号。
+  \item XMIT：干扰发射提示灯，灯光亮起表示 ALQ-126 正在发射干扰信号。
+  \item SAM：地空导弹报警灯，灯光稳定亮起表示侦测到 SAM 跟踪雷达锁定，闪烁时表示侦测到导弹发射。
+  \item AAA：防空高炮报警灯，灯光稳定亮起表示侦测到 AAA 跟踪雷达锁定，闪烁时表示侦测到防空高炮开火。
+  \item CW：连续波报警灯，灯光亮起表示本机正被连续波信号源照射。
+  \item AI：机载拦截雷达报警灯，灯光稳定亮起表示侦测到 AI 跟踪雷达锁定。
+\end{enumerate}
+
+\subsubsection{方位距离航向指示器（BDHI）}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{bdhi1.png}
+\end{figure}
+用于显示方位角和航向信息。
+
+\begin{enumerate}
+  \item 二号方位指针：指向调定的 TACAN 台的磁航向。
+  \item 罗盘指针：显示当前飞机的磁航向。
+  \item 一号方位指针：指向调定的 UHF/ADF 电台的方位。
+  \item 距离计数器：显示本机至调定的 TACAN 台的斜距（图中不可见）。
+\end{enumerate}
+
+\subsection{座舱盖抛离手柄}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{canopyjettison1.png}
+\end{figure}
+用于手动抛离座舱盖。
 
 \subsection{右膝仪表板}
 
+\subsubsection{注意-提示面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{cautionadvisory.png}
+\end{figure}
+\begin{itemize}
+  \item C D HOT：“过热”注意灯，灯光亮起表示 RIO 控制和显示器过热。
+  \item CABIN PRESS：“座舱增压”注意灯，灯光亮起表示驾驶舱压强过低。
+  \item FUEL LOW：“油量低”注意灯，灯光亮起表示左/后或右/前供油油箱组内剩余燃油小于1,000磅。
+  \item OXY LOW：“供氧压力低”注意灯，灯光亮起表示剩余液氧储量少于 2 公升，或供氧压强过低。
+  \item CANOPY：“座舱盖”注意灯，灯光亮起表示座舱盖未降下并锁定。
+  \item FUZE HV：“引信高电压”注意灯，灯光亮起表示 AWW-4 电子引信失效。
+  \item RDR ENABLED：“雷达启用”注意灯，灯光亮起表示机轮负重时可以在地面上进行雷达操作。
+  \item COOLING AIR：“冷气通风”提示灯，灯光亮起表示强制空气冷却系统超温。
+  \item MSL COND：“导弹状况”提示灯，灯光亮起表示导弹冷却液流超温或压力低，且两种情况都会导致导弹的冷却液泵关闭。如果“不死鸟”导弹挂架安装了整流罩，状况提示灯光亮起可能也表示WCS 正处于 STBY（待机）或 ON（开机）状态，但 LIQ COOLING 开关未拨至 AWG-9/AM-54 档位。
+  \item AWG-9 COND：“AWG-9 状况”提示灯，灯光亮起表示 AWG-9 冷却液流过热或超压，或由于超温开关关闭冷却泵。
+  \item NAV COMP：“导航组件”提示灯，NAV MODE 选择开关位于 INS 档位时，灯光亮起表示 INS 或 CSDC 故障。
+  \item FILM LOW：“胶卷余量”提示灯，灯光亮起表示机载任务录像机胶片余量低。
+  \item IMU：“惯性测量装置”提示灯，灯光亮起表示惯性测量装置故障，或导航系统处于 AHRS（姿态航向基准系统）/AM（大气数据）模式。
+  \item AHRS：“姿态航向基准”提示灯，灯光亮起表示 AHRS 提供的姿态或航向信息不可靠。
+\end{itemize}
+
 \subsection{右侧垂直控制台}
+
+\subsubsection{电子对抗显示器（ECMD）}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{mdi.png}
+\end{figure}
+ECMD 用于显示导航信息，它有一个亮度控制旋钮、一个测试按钮和一个自检（BIT）状态指示器（正常工作时状态指示器无显示， ECMD 故障时状态指示器显示白色标识旗）。
+
+之所以称之为 ECMD 是因为 F-14A 和后来的 PMDIG F-14B 用也将其作为 RWR 显示器。
+
+注意：请查阅 导航 中的相关章节来获取更多信息。
 
 \subsection{右侧控制台}
 
+\subsubsection{雷达告警接收机面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{rwr.png}
+\end{figure}
+
+\begin{enumerate}
+  \item PWR 开关：用于控制 ALR-67 的电源。
+  \item 显示类型选择开关：用于控制 RWR 显示的目标类型和优先级。
+  \item MODE 选择开关：三档位弹簧开关，释放开关后，开关弹回中间（OFF）位置。将开关保持在 OFST（偏置）和 LMT（限制）位置可以启用对应的功能。
+  \item TEST 开关：三档位弹簧开关，释放开关后，开关弹回中间位置。短暂地将开关置于 BIT 档位会开始 ALR-67 自检程序。BIT 第一页显示时，将开关拨至 SPL（特殊）档位会显示特殊 BIT 状态页，释放开关后，特殊 BIT 状态页会显示三秒然后消失。
+  \item VOL 旋钮：用于调节 RIO 接收的 ALR-67 音频音量。  
+\end{enumerate}
+
+\subsubsection{数字数据显示面板（DDI）}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ddi.png}
+\end{figure}
+数字数据显示面板用于显示通过数据链路接收的指令。
+
+\begin{itemize}
+  \item AFT VEC：飞机正接受数据链路引导，从目标后方（后半球）接近目标。
+  \item COL VEC：飞机正接受数据链路引导，采用目标截击航线。
+  \item NO MSG：无信息，表示数据链路通信正常。但未接受指令。
+  \item TO WAY PT：行进至目标信息所示导航点。
+  \item HANDOVER：TDS（战术数据系统）正将飞机转交给另一控制中心。
+  \item ORBIT：在当前位置维持最长滞空时间进行盘旋。
+  \item CHALNGE：拦截并目视识别目标。
+  \item ARM 1：拦截目标并使用 AIM-54 摧毁指定敌方目标。
+  \item ARM 2：拦截目标并使用 AIM-7 摧毁指定敌方目标。
+  \item ARM 3：拦截目标并使用 AIM-9 摧毁指定敌方目标。
+  \item NOT CMD：无视当前接收到的航向、速度和高度信息。这也表示有效指令 BIT 暂不可用。
+  \item FRE LAN：自由攻击最优目标。
+  \item DIS’GAGE：停火。
+  \item ABORT：终止行动。
+  \item BEAC ON：启用 APN-154 跟踪信标。
+  \item BEAC DUB：设置 APN-154 信标双脉冲模式。
+  \item DROP：接收指令使用数据链路进行对地攻击。如果选用数据链路攻击模式，则使用自动投放，否则采用手动投放。
+  \item BEAC OFF：关闭 APN-154 跟踪信标。
+  \item RET BASE：返回指定的基地。
+  \item WAVE OFF：复飞，同时 AFCS（自动飞行控制系统，也就是自动驾驶）将自动解除。
+  \item LAND CHECK：CATCC（母舰空中交通管制中心）有可用的 AFCS 数据链路通道，机组应完成着舰检查单。
+  \item ACL BEAC：CATCC 请求本机开启 AN/APN-154 信标。
+  \item ACL RDY：ACL 已锁定本机的 APN-154 信标，且正在传输引导讯号。飞行员现在可以看见下滑道信息。
+  \item A/P CPLR：ACL 已就绪，准备控制飞机进行 ACL 进近，机组应启用自动驾驶。
+  \item 10 SEC：表示距离下个自动驾驶行为或航路点还有10秒。在 ACL 中则表示数据链路的下滑道信息和指令正根据母舰的持续运动进行调整。
+  \item ADJ A/C：表示本机起降航线中或起降航线附近有其他飞机。
+  \item VOICE：指示 ACL 不可用，切换至标准的基于音频通讯的进近流程。
+  \item TILT：表示在过去的10秒内未收到任何数据链路信息。在 ACL 中，如果超过2秒未收到数据链路信息，AFCS 会断开。
+  \item CMD CHG：表示即将收到或最近更变的数据链路指令。
+  \item ALT CHG：表示即将收到或最近更变的数据链路高度指令。
+  \item MON ALT：表示本机未能以足够精度保持数据链路指令高度。
+  \item MANUAL：表示本机应解除自动驾驶。
+  \item SPD CHG：表示即将收到或最近更变的数据链路速度指令。
+  \item MON SPD：表示本机未能以足够精度保持数据链路指令速度。
+  \item CMD CTRL：表示飞机正由数据链路控制进行助降。
+  \item CHG CHN：切换数据链路波道指令。
+  \item HDG CHN：表示即将收到或最近更变的数据链路航向指令。
+  \item CANC RPY：TDS（战术数据系统）取消发送应答信息。
+  \item FWD VEC：飞机正接受数据链路引导，从目标前方（前半球）接近目标。
+\end{itemize}
+注意：目前在 DCS 中未模拟绝大多数依赖于数据链路应答消息的 DDI 灯光。
+
+\subsubsection{防御性电子对抗（DECM）控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{decm.png}
+\end{figure}
+这个面板用于控制防御性电子对抗干扰发射机（AN/ALQ-126）。
+
+\begin{enumerate}
+  \item STANDBY 指示灯：橘黄色指示灯，表示 DECM 系统处于待机状态，正在预热。系统准备就绪后 STANDBY 灯熄灭。测试和正常工作时，如果 STANDBY 指示灯亮起起，则表示系统故障。
+  \item DECM 模式选择开关：DECM 电源/模式选择开关，用于控制 DECM 系统的电源和选择系统功能。
+  \begin{itemize}
+    \item OFF：关闭 AN/ALQ-126 的电源。
+    \item STBY：待机状态，向系统通电以进行预热。
+    \item TEST/HOLD 3 SEC：将选择开关拨该位置并保持3秒以准备系统测试。
+    \item TEST/ACT：将开关保持在 TEST/HOLD 3 SEC 档位3秒后，选择 TEST/ACT 档位来开始 AN/ALQ-126 自检。
+    \item REC：接收模式，使 AN/ALQ-126 接收并分析威胁信号。侦测到的导弹发射威胁可能强制命令系统进入重复模式。
+    \item RPT：重复模式，使 AN/ALQ-126 向接收到的雷达威胁发送干扰信号。
+  \end{itemize}
+  \item AUDIO 旋钮：音量控制旋钮，用于调节 RIO 头戴中 AN/ALQ-126 的音频音量。
+\end{enumerate}
+
+\subsubsection{数据链路控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{datalink.png}
+\end{figure}
+用于控制数据链路。
+
+\begin{enumerate}
+  \item 传输模式选择开关：用于设置数据链路的传输模式。
+  \begin{itemize}
+    \item TEST：开始系统测试。
+    \item NORM：正常工作模式。
+    \item A/J：抗干扰工作模式。
+  \end{itemize}
+  \item 频率选择器：选择器上的拨轮用于设置数据链路频率。
+  \item 数据链路电源开关：控制数据链路电源，也用于设置数据链路备用（AUX）模式。
+\end{enumerate}
+
+\subsubsection{数据链路应答和天线控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{datalinkantenna.png}
+\end{figure}
+用于控制数据链路对准、应答和天线的面板。
+
+\begin{enumerate}
+  \item ANTENNA 选择开关：用于选择 UHF 1 和数据链路使用的天线。
+  \item REPLY 开关：用于控制数据链路应答，NORM（正常）档位传输数据链路应答，CANC（取消）档位禁用数据链路应答。
+  \item MODE 选择开关：弹簧开关，选择 CAINS/WAYPT 档位时，电磁铁将开关固定在该位置上。释放开关后，开关弹回 TAC 档位。这个开关用于启用数据链路对准和航路点更新。
+  \begin{itemize}
+    \item CAINS/WAYPT：启用数据链路对准和航路点更新。
+    \item TAC：启用手动选择数据链路频率，停止数据链路对准。
+  \end{itemize}
+  \item ADDRESS 拨轮：设置本机使用的数据链路地址（调定任务分配的数据链路地址）。
+\end{enumerate}
+
+\subsubsection{AN/ALE-39控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ale39.png}
+\end{figure}
+
+\begin{enumerate}
+  \item 对抗措施余量计数：用于显示飞机装载的对抗措施的剩余数量。按下并旋转计数器下方对应的旋钮来设置计数器。
+  \item PWR/MODE 开关：电源/模式开关，用接通 AN/ALE-39 的电源和选择其工作模式。
+  \begin{itemize}
+    \item AUTO（CHAFF）/MAN：允许手动发射对抗措施，同时允许 ECM 系统根据侦测到的威胁自动发射箔条。
+    \item MAN：允许手动发射对抗措施。
+    \item OFF：关闭 AN/ALE-39。
+  \end{itemize}
+  \item SALVO FLARES 开关：红外干扰弹应急发射开关，飞机迅速同步发射所有红外干扰弹。向上提起开关才能将其拨至 ON 档位。
+  \item FLARE MODE 开关：红外干扰弹发射模式选择开关，用于选择红外干扰弹布撒器工作模式。也用于控制飞行员驾驶杆的 DLC 按钮发射哪种对抗措施。
+  \begin{itemize}
+    \item MULT：齐射模式，每个红外干扰弹发射指令都会使 AN/ALE-39 从所有装载了红外干扰弹的布撒器中分别发射一枚红外干扰弹。这个选项对手动发射模式和程序发射模式都有效。
+    \item NORM：正常模式，每个红外干扰弹发射指令都会使 AN/ALE-39 发射一枚红外干扰弹。这个选项对手动发射模式和程序发射模式都有效。
+    \item PILOT：飞行员控制模式，允许飞行员通过驾驶杆上的 DLC 按钮手动发射红外干扰弹，如果选择除 PILOT 以外的档位，按下 DLC 按钮会发射箔条。
+  \end{itemize}
+  \item 干扰措施发射开关：弹簧开关，释放开关时，开关弹回中间位置，用于发射对应的对抗措施。
+  \begin{itemize}
+    \item PRGM：程序发射，将开关向上提起才能将其拨至该档位。选择 PRGM 档位会按照对抗措施程序发射箔条或红外干扰弹。
+    \item STBY：待机，不发射对抗措施。
+    \item SGL：单发，开关拨至该档位时，AN/ALE-39 会发射一枚箔条或红外干扰弹（FLARE MODE 开关的设置将决定每个发射指令对应的实际发射数量）。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{AAI控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{aa1.png}
+\end{figure}
+AN/APX-76 问询器控制面板。
+
+\begin{enumerate}
+  \item M4 ALARM OVERRIDE 开关：MODE 4 警报超控开关，用于禁用 RIO 头戴中的 MODE 4 警告音。
+  \item TEST-CHAL CC 开关：测试-询问控制开关，这个弹簧开关用于控制 IFF 询问和测试，释放开关时，开关弹回中间位置。
+  \begin{itemize}
+    \item TEST：将开关拨至该档位会使 AN/APX-76 询问本机的 IFF 应答机，以此来测试系统功能。如果编码设置相同，DDD 显示器中对应3海里和4海里的位置会出现两条实线。
+    \item CHAL CC：将开关拨至该档位会使 AN/APX-76 进行长达10秒的询问周期，DDD 显示器中只会显示以正确模式和编码回应的信号。
+  \end{itemize}
+  \item CODE 选择拨轮：编码设置拨轮，用于设置询问模式和询问编码。第一个拨轮用于设置模式，后四个拨轮用于设置编码。
+  \item CHAL 指示灯：询问状态灯，灯光亮起表示 AN/APX-76 正在进行询问。
+  \item FAULT 指示灯：故障指示灯，灯光亮起表示 AN/APX-76 故障。
+\end{enumerate}
+注意：由于 DCS 对于 IFF 模拟的限制，目前 AAI 控制面板无功能。
+
+\subsubsection{AN/ALE-39编程面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{ale39programmer.png}
+\end{figure}
+用于编辑和设置 AN/ALE-39 的对抗措施弹射程序。
+
+\begin{enumerate}
+  \item JAMR 拨轮（灰色）：用于设置有源干扰弹发射程序。
+  \begin{itemize}
+    \item QTY：数量拨轮，用于设置程序弹射的有源干扰弹数量。
+    \item INTV：间隔拨轮，用于设置程序弹射有源干扰弹的间隔，单位是秒。
+  \end{itemize}
+  \item CHAFF 拨轮（蓝色）：用于设置箔条发射程序。
+  \begin{itemize}
+    \item B-QTY：数量拨轮，用于设置程序每批次齐射箔条的数量，也可以设置为 C（连续弹射）和 R（随机数量）。
+    \item B-INTV：间隔拨轮，用于设置程序每批次齐射箔条的间隔，也可以设置为 R（随机间隔）。
+    \item S-QTY：数量拨轮，用于设置程序每次执行时的发射批次数。
+    \item S-INTV：间隔拨轮，用于设置程序每次执行时的发射批次的间隔。
+  \end{itemize}
+  \item FLARE 拨轮（黄色）：用于设置红外干扰弹发射程序。
+  \begin{itemize}
+    \item QTY：数量拨轮，用于设置程序发射的红外干扰弹数量。
+    \item INTV：间隔拨轮，用于设置程序发射红外干扰弹的间隔。
+  \end{itemize}
+  \item LOAD 控制拨轮：用于向 AN/ALE-39 中输入每个对抗措施布撒器的分区中填充的措施类型（C - 箔条，F - 红外干扰弹，J - 有源干扰弹）。
+  \begin{itemize}
+    \item L10：设置布撒器左（前）10分区中填充的对抗措施类型。
+    \item L20：设置布撒器左（前）20分区中填充的对抗措施类型。
+    \item R10：设置布撒器右（后）10分区中填充的对抗措施类型。
+    \item R20：设置布撒器右（后）20分区中填充的对抗措施类型。
+  \end{itemize}
+  \item RESET 开关：开关，用于向 AN/ALE-39 中载入设置程序，并复位所有电子序列器开关至初始位置。
+\end{enumerate}
+
+\subsubsection{机内照明控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{light.png}
+\end{figure}
+用于控制 RIO 驾驶舱内的灯光。
+
+\begin{enumerate}
+  \item INSTRUMENT 拨轮：仪表板灯光拨轮，用于控制仪表板灯光亮度，0等于关闭灯光，1-14逐渐增加灯光亮度。
+  \item WHITE FLOOD 开关：用于控制 RIO 驾驶舱中的白色泛光灯。向上提起开关才可将其拨至 BRT（亮）或 DIM（暗）档位。
+  \item CONSOLE 拨轮：控制台灯光拨轮，用于调整控制台灯光和红色泛光灯的拨轮。拨至0会关闭控制台灯光和红泛光灯，而1-14逐渐增加控制台灯光的亮度。
+  \item RED FLOOD 开关：红色泛光灯开关，用于控制仪表板和控制台的红色泛光灯。
+  \begin{itemize}
+    \item BRT：开启高亮度仪表板和控制台红色泛光灯。
+    \item MED：仅开启红色控制台泛光灯。
+    \item DIM：仅开启低亮度控制台红色泛光灯。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{数据/ADF开关}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{data.png}
+\end{figure}
+用于控制 HSD 和 ECMD 中的显示的数据和 ADF 信息。选择 BOTH 档位时，HSD 和 ECMD 中将显示 ADF 游标和导航数据块。而选择 DATA 档位时，只显示导航数据块。选择 OFF 档位时，则二者都不会显示再 HSD 和 ECMD 中。
+
+\subsubsection{敌我识别（IFF）应答机控制面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{transponder.png}
+\end{figure}
+用于控制 AN/APX-72 应答机。
+
+\begin{enumerate}
+  \item MODE 4 开关：用于启用 MODE 4。
+  \item MODE 4 AUDIO/LIGHT 开关：MODE 4 音频/灯光开关，用于启用 MODE 4 音频和灯光监控。
+  \begin{itemize}
+    \item AUDIO：音频，启用 MODE 4 询问的音频监控和 MODE 4 应答的 REPLY（应答）灯光监控。
+    \item OUT：关闭，关闭 MODE 4 的音频和灯光监控。
+    \item LIGHT：灯光，启用 MODE 4 应答的灯光监控。
+  \end{itemize}
+  \item MODE 4 CODE 选择开关：MODE 4 密码选择开关，用于选择 MODE 4 使用的密码类型。
+  \begin{itemize}
+    \item ZERO：擦除系统中的 A 和 B 密码。
+    \item B：选择并使用 B 密码。
+    \item A：选择并使用 A 密码。
+    \item HOLD：无功能。
+  \end{itemize} 
+  \item MODE 4 REPLY 灯光：MODE 4 应答指示灯，灯光亮起表示系统正生成并发送 MODE 4 应答。按下指示灯可以测试灯光。
+  \item TEST 灯：测试灯光，使用控制面板上的各类测试开关时，测试灯会亮起。这盏灯本身可以按下来测试灯光。
+  \item MASTER 选择开关：主模式选择开关，用于控制 AN/APX-72 的工作模式。
+  \begin{itemize}
+    \item OFF：关闭，切断 AN/APX-72 的电源。
+    \item STBY：待机模式，使系统进入待机状态，选择开关的其他档位时，系统可立即开始工作。
+    \item LOW：低灵敏度应模式，只回应附近的强询问信号。
+    \item NORM：正常模式，回应所有接收到的询问。
+    \item EMER：紧急应答模式，无视模式开关当前位置，回应 MODE 1、MODE 2 和 MODE 3/A 询问，同时正常回应 MODE C 询问。
+  \end{itemize}
+  \item MODE 开关：用于选择不同的 IFF 模式。
+  \begin{itemize}
+    \item TEST：用于测试不同模式下的应答，TEST 指示灯亮起起表示测试通过。
+    \item ON：启用选定的 IFF 模式。
+    \item OUT：关闭选定的 IFF 模式。
+  \end{itemize}
+  \item RAD TEST-OUT-MON 开关：用于控制地面测试和监控非 MODE 4 回应。
+  \begin{itemize}
+    \item RAD TEST：机组人员不使用该档位。
+    \item OUT：禁用地面测试和监控。
+    \item MON：监控 MODE 1、MODE 2、MODE 3 和 MODE C 回应，系统生成并发送回应时，测试灯会亮起。
+  \end{itemize}
+  \item IDENT-OUT-MIC 开关：用于控制 MODE 1、MODE 2 和 MODE 3 的 IDENT（识别）功能。
+  \begin{itemize}
+    \item IDENT：将开关拨至该档位并释放开关来启用系统 IDENT 回应，回应持续15至30秒。
+    \item OUT：关闭 IDENT 功能。
+    \item MIC：将 IDENT 控制转交给机组 UHF PTT（按键通话）开关，PTT 开关与 IDENT 档位作用相同，每次按下 PTT 都会启用 IDENT 回应。
+  \end{itemize}
+  \item CODE 拨轮：用于选择 MODE 1 和 MODE 3 使用的编码。
+\end{enumerate}
+注意：DCS 中暂未模拟应答机功能。
+
+\subsubsection{敌我识别（IFF）天线控制 / 测试面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{riotest.png}
+\end{figure}
+用于控制 IFF 天线、测试和地面冷却。
+
+\begin{enumerate}
+  \item IFF ANT 开关：敌我识别天线控制开关，用于选择应答机使用哪一组 IFF 天线。可以选择 AUTO（自动选择）或 LWR（机身下部天线）。
+  \item IND LT/DDI BIT 开关：指示灯/DDI自检开关，用于手动测试 DDI 自检和测试 RIO 驾驶舱内的指示灯。
+  \item GND CLG 开关：地面冷却控制开关，允许地面通过外部引气为飞机系统提供冷却。
+  \begin{itemize}
+    \item OBC/CABIN：允许在地面使用外部引气为驾驶舱通风并冷却 AWG-9/AIM-54，但 OBC 性能下降。
+    \item OFF：禁用外部引气通风和冷却。
+    \item AWG-9/AIM-54：使用外部引气为 AWG-9 和 AIM-54 的冷却液降温，性能更好但会切断驾驶舱通风。
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{电力系统测试面板}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{powersystest.png}
+\end{figure}
+地勤人员使用此面板测试飞机电力系统。
+注意：DCS 中无功能。
+
+\subsubsection{座舱盖除雾 / 座舱通风气流调节拉杆}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{canopydefog1.png}
+\end{figure}
+舱盖空气散流器控制手柄控制驾驶舱中的通风气流。手柄置于正常位置（CABIN AIR）时，空调系统引导70\%的气流空过驾驶舱空气散流器，30\%通过舱盖空气散流器。手柄置于 CANOPY DEFOG（舱盖除雾）位置时，空调系统将引导所有气流通过舱盖空气散流器来给舱盖除雾。
+
 \subsection{座舱盖控制手柄}
+\begin{figure}[htb]
+  \center
+  \includegraphics[width=0.6\textwidth]{canopyhandle1.png}
+\end{figure}
+驾驶舱右侧舱壁上的舱盖控制手柄用于操作座舱盖。这个手柄安装在标有手柄位置标识、内置舱盖控制机构的控制盒下方。飞行员驾驶舱内也有一个相同的舱盖控制手柄。
 
-% \chapter{图表公式例子}
-% \label{cha:chapter02}
-
-% \section{其它例子}
-% \label{sec:other}
-
-% 在第~\ref{cha:intro} 章中我们学习了贝叶斯公式~(\ref{equ:chap1:bayes})，这里我们复
-% 习一下：
-% \begin{equation}
-% \label{equ:chap2:bayes}
-% p(y|\vx) = \frac{p(\vx,y)}{p(\vx)}=
-% \frac{p(\vx|y)p(y)}{p(\vx)}
-% \end{equation}
-
-% \subsection{绘图}
-% \label{sec:draw}
-
-% 本模板不再预先装载任何绘图包（如 \pkg{pstricks，pgf} 等），完全由用户来决定。
-% 个人觉得 \pkg{pgf} 不错，不依赖于 Postscript。此外还有很多针对 \LaTeX{} 的
-%  GUI 作图工具，如 XFig(jFig), WinFig, Tpx, Ipe, Dia, Inkscape, LaTeXPiX,
-% jPicEdt, jaxdraw 等等。
-
-% \subsection{插图}
-% \label{sec:graphs}
-
-% 强烈推荐《\LaTeXe{} 插图指南》！关于子图形的使用细节请参看 \pkg{subcaption} 宏包的说明文档。
-
-% \subsubsection{一个图形}
-% \label{sec:onefig}
-% 一般图形都是处在浮动环境中。之所以称为浮动是指最终排版效果图形的位置不一定与源文
-% 件中的位置对应\footnote{This is not a bug, but a feature of \LaTeX!}，这也是刚使
-% 用 \LaTeX{} 同学可能遇到的问题。如果要强制固定浮动图形的位置，请使用 \pkg{float} 宏包，
-% 它提供了 \texttt{[htb]} 参数，比如图~\ref{fig:xfig1}。
-% \begin{figure}[htb] % use float package if you want it here
-%   \centering
-%   \includegraphics{thu-whole-logo.pdf}
-%   \caption{利用 Xfig 制图}
-%   \label{fig:xfig1}
-% \end{figure}
-
-% 大学之道，在明明德，在亲民，在止于至善。知止而后有定；定而后能静；静而后能安；安
-% 而后能虑；虑而后能得。物有本末，事有终始。知所先后，则近道矣。古之欲明明德于天
-% 下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；
-% 欲正其心者，先诚其意；欲诚其意者，先致其知；致知在格物。物格而后知至；知至而后
-% 意诚；意诚而后心正；心正而后身 修；身修而后家齐；家齐而后国治；国治而后天下
-% 平。自天子以至于庶人，壹是皆以修身为本。其本乱而未治者 否矣。其所厚者薄，而其所
-% 薄者厚，未之有也！
-
-% \hfill —— 《大学》
-
-
-% \subsubsection{多个图形}
-% \label{sec:multifig}
-
-% 如果多个图形相互独立，并不共用一个图形计数器，那么
-% 用 \texttt{minipage} 或者\texttt{parbox} 就可以。否则，请参看
-% 图~\ref{fig:big1-subcaptionbox}，它包含两个小图，分别是图~\ref{fig:subfig1}和
-% 图~\ref{fig:subfig2}。推荐使用 \cs{subcaptionbox}，因为可以像
-% 图~\ref{fig:big1-subcaptionbox} 那样对齐子图的标题，也可以使用 \pkg{subcaption}
-% 宏包的 \cs{subcaption}（放在 minipage中，用法同\cs{caption}）或
-% 是 \pkg{subfigure} 、\pkg{subtable}环境，像图~\ref{fig:big1-subfigure}，不要再
-% 用 \cs{subfloat}、\cs{subfigure} 和 \cs{subtable}。
-
-% \begin{figure}[htb]
-%   \centering%
-%   \subcaptionbox{第一个小图形\label{fig:subfig1}}[3cm] %标题的长度，超过则会换行，如下一个小图。
-%     {\includegraphics[height=3cm]{thu-fig-logo.pdf}}%
-%   \hspace{4em}%
-%   \subcaptionbox{第二个小图形，注意这个图略矮些。如果标题很长的话，它会自动换行\label{fig:subfig2}}
-%       {\includegraphics[height=2cm]{thu-text-logo.pdf}}
-%   \caption{包含子图形的大图形(subcaptionbox示例)}
-%   \label{fig:big1-subcaptionbox}
-% \end{figure}
-% \begin{figure}[htb]
-%   \centering%
-%   \begin{subfigure}{3cm}
-%     \includegraphics[height=3cm]{thu-fig-logo.pdf}
-%     \caption{第一个小图形}
-%   \end{subfigure}%
-%   \hspace{4em}%
-%   \begin{subfigure}{0.5\textwidth}
-%     \includegraphics[height=2cm]{thu-text-logo.pdf}
-%     \caption{第二个小图形，注意这个图略矮些。subfigure中同一行的子图在顶端对齐。}
-%   \end{subfigure}
-%   \caption{包含子图形的大图形(subfigure示例)}
-%   \label{fig:big1-subfigure}
-% \end{figure}
-
-% 古之学者必有师。师者，所以传道受业解惑也。人非生而知之者，孰能无惑？惑而不从师，
-% 其为惑也，终不解矣。生乎吾前，其闻道也固先乎吾，吾从而师之；生乎吾後，其闻道也亦
-% 先乎吾，吾从而师之。吾师道也，夫庸知其年之先後生於吾乎！是故无贵无贱无长无少，道
-% 之所存，师之所存也。
-
-% 嗟乎！师道之不传也久矣，欲人之无惑也难矣。古之圣人，其出人也远矣，犹且从师而问焉；
-% 今之众人，其下圣人也亦远矣，而耻学於师。是故圣益圣，愚益愚。圣人之所以为圣，愚
-% 人之所以为愚，其皆出於此乎？爱其子，择师而教之，於其身也，则耻师焉，惑焉。彼童子
-% 之师，授之书而习其句读者，非吾所谓传其道、解其惑者也。句读之不知，惑之不解，或师
-% 焉，或不焉，小学而大遗，吾未见其明也。巫医、乐师、百工之人不耻相师，  士大夫之族
-% 曰“师”曰“弟子”之云者，则群聚而笑之。问之，则曰：彼与彼年相若也，道相似也，位
-% 卑则足羞，官盛则近谀。呜呼！师道之不复，可知矣。巫医、乐师、百工之人。吾子不齿，
-% 今其智乃反不能及，其可怪也欤！圣人无常师。孔子师郯子、苌子、师襄、老聃。郯子之徒，
-% 其贤不及孔子。孔子曰：“三人行，必有我师。”是故弟子不必不如师，师不必贤於弟子。
-% 闻道有先後，术业有专攻，如是而已。
-
-% 如果要把编号的两个图形并排，那么小页就非常有用了：
-% \begin{figure}
-% \begin{minipage}{0.48\textwidth}
-%   \centering
-%   \includegraphics[height=2cm]{thu-whole-logo.pdf}
-%   \caption{并排第一个图}
-%   \label{fig:parallel1}
-% \end{minipage}\hfill
-% \begin{minipage}{0.48\textwidth}
-%   \centering
-%   \includegraphics[height=2cm]{thu-whole-logo.pdf}
-%   \caption{并排第二个图}
-%   \label{fig:parallel2}
-% \end{minipage}
-% \end{figure}
-
-% 李氏子蟠，年十七，好古文、六艺，经传皆通习之，不拘於时，学於余。余嘉其能行古
-% 道，作师说以贻之。
-
-% \hfill —— 韩愈（唐）
+\begin{itemize}
+  \item BOOST：使用助力模式关闭座舱盖，用于低温或强逆风条件下。
+  \item CLOSE：关闭座舱盖，这是飞行中舱盖控制手柄的默认位置。
+  \item HOLD：将座舱盖保持在非关闭位置外的当前位置。
+  \item OPEN：开启座舱盖。
+  \item AUX OPEN：允许系统液压过低时手动开启座舱盖。
+\end{itemize}
